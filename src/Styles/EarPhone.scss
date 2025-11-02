@@ -1,0 +1,61 @@
+.ea{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.earphonee{
+    background-color: white;
+    .Ear1{
+        .one{
+            margin-top: 20%;
+            margin-left: 5%;
+            margin-left: 5%;
+            width: 90%;
+            background-color: #f1f1f1;
+            padding: 10%;
+
+            img{
+                width: 90%;
+            }
+        }
+        h2{
+            margin-top: 10%;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 10px;
+            color: #D87D4A;
+            text-align: center;
+        }
+        h1{
+            font-weight: 700;
+            font-size: 28px;
+            text-align: center;
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+        p{
+            font-weight: 400;
+            font-size: 13px;
+            text-align: center;
+            line-height: 25px;
+        }
+        button{
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #D87D4A;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            margin-left: 25%;
+            margin-bottom: 10px;
+        }
+        
+    }
+}

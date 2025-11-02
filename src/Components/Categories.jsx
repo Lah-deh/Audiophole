@@ -8,7 +8,7 @@ import { PiGreaterThan } from "react-icons/pi";
 const categories = [
   { name: "HEADPHONES", image: headphone, path: "/headphone" },
   { name: "SPEAKERS", image: speaker, path: "/speaker" },
-  { name: "EARPHONES", image: earphone, path: "/category/earphones" }
+  { name: "EARPHONES", image: earphone, path: "/earphones" }
 ];
 
 const Categories = () => {
