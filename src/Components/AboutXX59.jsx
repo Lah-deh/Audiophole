@@ -1,0 +1,61 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import XX99 from '../assets/XX59.png'
+
+const AbouttXX59 = () => {
+  const navigate = useNavigate()
+
+  const handleAddToCart = () => {
+    alert('Added to cart!')
+  }
+
+  return (
+    <div className='abb'>
+      <h3
+        onClick={() => navigate(-1)}
+        style={{
+          cursor: 'pointer',
+          color: '#ded3d3ff',
+          fontWeight: '400',
+          fontSize: '15px',
+          marginTop: '3%'
+        }}
+      >
+        Go Back
+      </h3>
+
+      <div className='one'>
+        <img src={XX99} alt="XX99 Headphones" />
+      </div>
+
+      
+      <h1>
+        XX59
+        <br />
+        HEADPHONES
+      </h1>
+      <p>
+        Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.
+      </p>
+      <h4>$ 899</h4>
+
+      <button
+        onClick={handleAddToCart}
+        style={{
+          backgroundColor: '#D87D4A',
+          color: 'white',
+          border: 'none',
+          padding: '12px 24px',
+          marginTop: '15px',
+          cursor: 'pointer',
+          fontWeight: '600',
+          letterSpacing: '1px'
+        }}
+      >
+        ADD TO CART
+      </button>
+    </div>
+  )
+}
+
+export default AbouttXX59

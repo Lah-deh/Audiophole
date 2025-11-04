@@ -1,19 +1,19 @@
 import React from 'react'
 import Header from '../Components/Header.jsx'
-import AboutXX9 from '../Components/AboutXX9.jsx'
-import FeatureXX9 from '../Components/FeatureXX9.jsx'
+import AboutZX7  from '../Components/AboutZX7.jsx'
+import FeatureZX7 from '../Components/FeatureZX7.jsx'
 import Categories from '../Components/categories.jsx'
 import About from '../Components/About.jsx'
 import Footer from '../Components/Footer.jsx'
-import '../Styles/XX9.scss'
 
 
-const XX9 = () => {
+
+const ZX7= () => {
   return (
     <div className='ff'>
         <Header />
-        <AboutXX9/>
-        <FeatureXX9 />
+        <AboutZX7/>
+        <FeatureZX7 />
 
         <Categories />
         <About />
@@ -22,4 +22,4 @@ const XX9 = () => {
   )
 }
 
-export default XX9
+export default ZX7

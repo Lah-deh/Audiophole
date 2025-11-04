@@ -1,5 +1,6 @@
 import React from 'react'
 import XX99 from '../assets/headphone.png'
+import {Link } from 'react-router-dom'
 
 const Headphone2 = () => {
   return (
@@ -10,7 +11,9 @@ const Headphone2 = () => {
       
       <h1>XX99 MARK I<br/> HEADPHONES</h1>
       <p>As the gold standard for headphones, the<br/> classic XX99 Mark I offers detailed and<br/> accurate audio reproduction for audiophiles,<br/> mixing engineers, and music aficionados alike<br/> in studios and on the go.</p>
-      <button>SEE PRODUCT</button>
+      <Link to='/XX9'>
+        <button>SEE PRODUCT</button>
+      </Link>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import ZX7 from '../assets/ZX7.png'
+import {Link} from 'react-router-dom'
 
 const Speaker2 = () => {
   return (
@@ -11,7 +12,9 @@ const Speaker2 = () => {
         
         <h1>ZX7<br/> SPEAKER</h1>
         <p>Stream high quality sound wirelessly with<br/> minimal loss. The ZX7 bookshelf speaker uses<br/> high-end audiophile components that<br/> represents the top of the line powered<br/> speakers for home or studio use.</p>
-        <button>SEE PRODUCT</button>
+        <Link to='/ZX7' >
+          <button>SEE PRODUCT</button>
+        </Link>
       
     </div>
   )

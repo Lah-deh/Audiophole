@@ -1,24 +1,16 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useCart } from '../context/CartContext.jsx';
-import XX99 from '../assets/XX99.png';
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import XX99 from '../assets/ZX7.png'
 
-const AbouttXX99 = () => {
-  const navigate = useNavigate();
-  const { addToCart } = useCart();
+const AboutZX7= () => {
+  const navigate = useNavigate()
 
   const handleAddToCart = () => {
-    alert("item added successfully")
-    addToCart({
-      id: 1,
-      name: 'XX99 MK II',
-      price: 2999,
-      img: XX99,
-    });
-  };
+    alert('Added to cart!')
+  }
 
   return (
-    <div className="abb">
+    <div className='abb'>
       <h3
         onClick={() => navigate(-1)}
         style={{
@@ -26,27 +18,27 @@ const AbouttXX99 = () => {
           color: '#ded3d3ff',
           fontWeight: '400',
           fontSize: '15px',
-          marginTop: '3%',
+          marginTop: '3%'
         }}
       >
         Go Back
       </h3>
 
-      <div className="one">
+      <div className='one'>
         <img src={XX99} alt="XX99 Headphones" />
       </div>
 
       <h2>NEW PRODUCT</h2>
+      
       <h1>
-        XX99 MARK II
+        ZX9
         <br />
-        HEADPHONES
+        SPEAKERS
       </h1>
       <p>
-        The new XX99 Mark II headphones redefine your premium audio experience
-        with balanced depth and studio-quality precision.
+        Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.
       </p>
-      <h4>$ 2,999</h4>
+      <h4>$ 4,500</h4>
 
       <button
         onClick={handleAddToCart}
@@ -58,13 +50,13 @@ const AbouttXX99 = () => {
           marginTop: '15px',
           cursor: 'pointer',
           fontWeight: '600',
-          letterSpacing: '1px',
+          letterSpacing: '1px'
         }}
       >
         ADD TO CART
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default AbouttXX99;
+export default AboutZX7
