@@ -1,5 +1,5 @@
 import React from 'react'
-import Categories from './categories' 
+import Categories from './Categories' 
 import Categorie from './Categorie'  
 import About from './About'
 const Homee = () => {

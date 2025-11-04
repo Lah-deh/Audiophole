@@ -1,7 +1,7 @@
 import React from 'react'
 import Speaker1 from './Speaker1.jsx'
 import Speaker2 from './Speaker2.jsx'
-import Categories from './categories.jsx'
+import Categories from './Categories.jsx'
 import About from './About.jsx'
 import Footer from './Footer.jsx'
 

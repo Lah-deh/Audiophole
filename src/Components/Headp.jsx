@@ -2,7 +2,7 @@ import React from 'react'
 import Headphone1 from './Headphone1.jsx'
 import Headphone2 from './Headphone2.jsx'
 import Headphone3 from './Headphone3.jsx'
-import Categories from './categories.jsx'
+import Categories from './Categories.jsx'
 import About from './About.jsx' 
 import Footer from './Footer.jsx'
 

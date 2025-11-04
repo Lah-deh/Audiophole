@@ -1,6 +1,6 @@
 import React from 'react'
 import Ear1 from './Ear1.jsx'
-import Categories from './categories.jsx'
+import Categories from './Categories.jsx'
 import About from './About.jsx'
 import Footer from './Footer.jsx'
 
