@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import { IoIosMenu } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
-import { useCart } from '../context/CartContext'; 
+import { Link } from "react-router-dom";
+import { useCart } from '../context/CartContext';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const { cartItems } = useCart(); 
-
-  const handleCartClick = () => {
-    navigate('/Cart');
-  };
+  const { cartItems } = useCart();
 
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
@@ -20,12 +15,14 @@ const Header = () => {
       <IoIosMenu className="menu-icon" onClick={() => setMenuOpen(true)} />
       <h2 className="logo">audiophile</h2>
 
+      
       <div style={{ position: 'relative', cursor: 'pointer' }}>
-        <FaCartShopping
-          className="cart-icon"
-          onClick={handleCartClick}
-          style={{ fontSize: '22px' }}
-        />
+        <Link to="/cart">
+          <FaCartShopping
+            className="cart-icon"
+            style={{ fontSize: '22px', color: 'white' }}
+          />
+        </Link>
 
         {cartCount > 0 && (
           <span
@@ -50,6 +47,7 @@ const Header = () => {
         )}
       </div>
 
+    
       <nav className={`sidebar ${menuOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={() => setMenuOpen(false)}>×</button>
         <ul>

@@ -11,13 +11,17 @@ import ZX9 from './Pages/ZX9.jsx'
 import ZX7 from './Pages/ZX7.jsx'
 import YX1 from './Pages/YX1.jsx'
 import { CartProvider } from './context/CartContext.jsx';
+import Checkout from "./Pages/Checkout.jsx";
+import ScrollToTop from "./Components/ScrollTop.jsx"; 
 
 
 function App() {
   return (
     <BrowserRouter>
-      <CartProvider>  
+      <CartProvider> 
+        <ScrollToTop/> 
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/headphone" element={<Headphone />} />
         <Route path="/speaker" element={<Speaker />} />
@@ -29,6 +33,7 @@ function App() {
         <Route path="/ZX7" element={<ZX7 />}/>
         <Route path="/YX1" element={<YX1 />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         
       </Routes>
       </CartProvider>

@@ -1,12 +1,20 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useCart } from '../context/CartContext.jsx';
 import XX99 from '../assets/ZX7.png'
 
 const AboutZX7= () => {
   const navigate = useNavigate()
+  const { addToCart } = useCart();
 
   const handleAddToCart = () => {
     alert('Added to cart!')
+    addToCart({
+          id: 5,
+          name: 'ZX7',
+          price: 499,
+          img: XX99,
+        });
   }
 
   return (
