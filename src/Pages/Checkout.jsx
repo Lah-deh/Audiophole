@@ -8,9 +8,16 @@ import { useCart } from "../context/CartContext";
 import SuccessModal from "./SuccessModal.jsx";
 import "../Styles/CheckOut.scss";
 
+// Convex imports
+import { useMutation } from "convex/react";
+import { api } from "../../convex/_generated/api";
+
 const Checkout = () => {
   const navigate = useNavigate();
-  const { cartItems, clearCart } = useCart(); // ✅ use clearCart from context
+  const { cartItems, clearCart } = useCart();
+
+  // Convex mutation
+  const placeOrder = useMutation(api.orders.placeOrder);
 
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -27,12 +34,14 @@ const Checkout = () => {
 
   const [paymentMethod, setPaymentMethod] = useState("e-money");
 
+  // handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleCheckout = (e) => {
+  // handle checkout
+  const handleCheckout = async (e) => {
     e.preventDefault();
 
     const requiredFields = [
@@ -58,9 +67,29 @@ const Checkout = () => {
       return;
     }
 
-    setShowModal(true);
+    try {
+      // Send order to Convex
+      await placeOrder({
+        name: formData.name,
+        email: formData.email,
+        address: formData.address,
+        city: formData.city,
+        country: formData.country,
+        cart: cartItems,
+        total: cartItems.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0
+        ),
+      });
+
+      setShowModal(true);
+    } catch (error) {
+      console.error("Order failed:", error);
+      alert("Something went wrong while placing your order.");
+    }
   };
 
+  // reset form
   const resetForm = () => {
     setFormData({
       name: "",
@@ -117,8 +146,8 @@ const Checkout = () => {
         )}
         cartItems={cartItems}
         clearCart={() => {
-          clearCart(); // ✅ from context
-          resetForm(); // ✅ reset form
+          clearCart();
+          resetForm();
         }}
       />
     </div>
