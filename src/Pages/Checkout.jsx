@@ -6,7 +6,7 @@ import CheckoutSummary from "../Components/CheckoutSummary.jsx";
 import Footer from "../Components/Footer.jsx";
 import { useCart } from "../context/CartContext";
 import SuccessModal from "./SuccessModal.jsx";
-import "../Styles/Checkout.scss";
+import "../Styles/CheckOut.scss";
 
 const Checkout = () => {
   const navigate = useNavigate();
