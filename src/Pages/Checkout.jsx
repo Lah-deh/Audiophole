@@ -4,22 +4,17 @@ import { useNavigate } from "react-router-dom";
 import CheckoutForm from "../Components/CheckoutForm.jsx";
 import CheckoutSummary from "../Components/CheckoutSummary.jsx";
 import Footer from "../Components/Footer.jsx";
-import { useCart } from "../context/CartContext";
 import SuccessModal from "./SuccessModal.jsx";
-import "../Styles/CheckOut.scss";
-
-// Convex imports
+import { useCart } from "../context/CartContext";
 import { useMutation } from "convex/react";
-import { api } from "../../convex/_generated/api";
+import { api } from "../../convex/_generated/api"; // adjust if path differs
+import "../Styles/CheckOut.scss";
 
 const Checkout = () => {
   const navigate = useNavigate();
   const { cartItems, clearCart } = useCart();
-
-  // Convex mutation
-  const placeOrder = useMutation(api.orders.placeOrder);
-
   const [showModal, setShowModal] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,14 +28,13 @@ const Checkout = () => {
   });
 
   const [paymentMethod, setPaymentMethod] = useState("e-money");
+  const placeOrder = useMutation(api.orders.placeOrder);
 
-  // handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // handle checkout
   const handleCheckout = async (e) => {
     e.preventDefault();
 
@@ -68,28 +62,41 @@ const Checkout = () => {
     }
 
     try {
-      // Send order to Convex
       await placeOrder({
-        name: formData.name,
-        email: formData.email,
-        address: formData.address,
-        city: formData.city,
-        country: formData.country,
-        cart: cartItems,
-        total: cartItems.reduce(
-          (sum, item) => sum + item.price * item.quantity,
-          0
-        ),
+        customer: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+        },
+        shipping: {
+          address: formData.address,
+          zip: formData.zip,
+          city: formData.city,
+          country: formData.country,
+        },
+        items: cartItems,
+        paymentMethod,
+        totals: {
+          subtotal: cartItems.reduce(
+            (sum, item) => sum + item.price * item.quantity,
+            0
+          ),
+          shipping: 50,
+          grandTotal:
+            cartItems.reduce(
+              (sum, item) => sum + item.price * item.quantity,
+              0
+            ) + 50,
+        },
       });
 
       setShowModal(true);
-    } catch (error) {
-      console.error("Order failed:", error);
-      alert("Something went wrong while placing your order.");
+    } catch (err) {
+      console.error("Error saving order:", err);
+      alert("Something went wrong while saving your order.");
     }
   };
 
-  // reset form
   const resetForm = () => {
     setFormData({
       name: "",
