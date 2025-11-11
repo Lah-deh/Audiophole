@@ -15,6 +15,14 @@ const Header = () => {
       <IoIosMenu className="menu-icon" onClick={() => setMenuOpen(true)} />
       <h2 className="logo">audiophile</h2>
 
+
+      <ul className="desktop-nav">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/headphone">Headphones</Link></li>
+        <li><Link to="/speaker">Speakers</Link></li>
+        <li><Link to="/earphones">Earphones</Link></li>
+     </ul>
+
       
       <div style={{ position: 'relative', cursor: 'pointer' }}>
         <Link to="/cart">
@@ -64,3 +72,8 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
