@@ -59,3 +59,146 @@
         
     }
 }
+
+
+
+@media(min-width:768px){
+    .earphonee{
+        .Ear1{
+            h2{
+                margin-top: 2%;
+            }
+
+            h1{
+                margin-top: 3%;
+
+                margin-bottom: 3%;
+            }
+            button{
+                margin-left: 36%;
+                margin-bottom: 6%;
+            }
+            .one{
+                margin-left: 14%;
+                width: 70%;
+                height: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                
+                img{
+                    width: 70%;
+                    height: 50%;
+                    
+                }
+            }
+        }
+    }
+    .ele{
+        display: none;
+    }
+    .elo{
+        display: none;
+    }
+}
+
+@media(min-width:1024px){
+    .earphonee{
+        .Ear1{
+            display: flex;
+            align-items: center;
+            margin-right: 4%;
+            margin-left: 4%;
+            justify-content: center;
+            gap: 4%;
+
+            h2{
+                margin-top: 50%;
+            }
+            .h1{
+                margin-top: 50%;
+            }
+        }
+        .category-grid{
+            display: flex;
+            margin-top: 20%;
+            justify-content: center;
+        }
+
+        .about{
+      display: flex;
+      gap: 5%;
+      align-items: center;
+      
+      .elll{
+        img{
+          display: none;
+        }
+      }
+
+      .ele{
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+      }
+
+      .elo{
+        display: none;
+        width: 100%;
+        width: 100%;
+      }
+
+      h2{
+        text-align: start;
+      }
+      p{
+        text-align: start;
+        font-size: 17px;
+      }
+    }
+
+    }
+
+
+}
+
+
+@media(min-width:1440px){
+    .earphonee{
+        .Ear1{
+            .one{
+                margin-top: 5%;
+            }
+            h2{
+                margin-top: 20%;
+
+            }
+            .h1{
+                margin-top: 20%;
+            }
+            p{
+                font-size: 18px;
+            }
+            button{
+                font-size: 18px;
+            }
+        }
+        .category-card{
+            padding: 100px 110px 10px 110px ;
+            p{
+                font-size: 22px;
+            }
+            .shop{
+                font-size: 18px;
+            }
+
+        }
+        .category-grid{
+            justify-content: center;
+            margin-left: 5%;
+        }
+
+    }
+}

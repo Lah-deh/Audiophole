@@ -9,11 +9,13 @@ const Headphone3 = () => {
         <img src={XX59} alt="XX99 Headphones "  />
       </div>
       
-      <h1>XX59<br/> HEADPHONES</h1>
-      <p>Enjoy your audio almost anywhere and<br/> customize it to your specific tastes with the <br/>XX59 headphones. The stylish yet durable <br/>versatile wireless headset is a brilliant <br/>companion at home or on the move.</p>
-      <Link to='/XX59' >
-        <button>SEE PRODUCT</button>
-      </Link>
+      <div>
+        <h1 className='h1'>XX59<br/> HEADPHONES</h1>
+        <p>Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.</p>
+        <Link to='/XX59' >
+          <button>SEE PRODUCT</button>
+        </Link>
+      </div>
     </div>
   )
 }

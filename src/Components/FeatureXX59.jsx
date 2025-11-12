@@ -8,7 +8,8 @@ import lee from '../assets/XX93.png'
 const FeatureXX59= () => {
   return (
     <div className='feature'>
-        <p>As the headphones all others are measured<br/> against, the XX99 Mark I demonstrates over<br/> five decades of audio expertise, redefining the<br/> critical listening experience. This pair of <br/>closed-back headphones are made of<br/> industrial, aerospace-grade materials to <br/>emphasize durability at a relatively light<br/> weight of 11 oz. <br/><br/>
+        <h2>Feature</h2>
+        <p>As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz. <br/><br/>
 
         From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector.</p>
            <div className='in'>
@@ -40,8 +41,10 @@ const FeatureXX59= () => {
 
            </div>
         <div className='image'>
-            <img src={man} alt='man'/>
-            <img src={phone} alt='phone'/>  
+            <div>
+              <img src={man} alt='man'/>
+              <img src={phone} alt='phone'/>  
+            </div>
             <img src={lee} alt='lee'/>
         </div>
         <h1>YOU MAY ALSO LIKE</h1>

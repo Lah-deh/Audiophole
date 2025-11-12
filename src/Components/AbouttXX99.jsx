@@ -32,37 +32,41 @@ const AbouttXX99 = () => {
         Go Back
       </h3>
 
-      <div className="one">
-        <img src={XX99} alt="XX99 Headphones" />
+      <div className='hey'>
+        <div className="one">
+          <img src={XX99} alt="XX99 Headphones" />
+        </div>
+
+        <div>
+          <h2>NEW PRODUCT</h2>
+          <h1>
+            XX99 MARK II
+            <br />
+            HEADPHONES
+          </h1>
+          <p>
+            The new XX99 Mark II headphones redefine your premium audio experience
+            with balanced depth and studio-quality precision.
+          </p>
+          <h4>$ 2,999</h4>
+
+          <button
+            onClick={handleAddToCart}
+            style={{
+              backgroundColor: '#D87D4A',
+              color: 'white',
+              border: 'none',
+              padding: '12px 24px',
+              marginTop: '15px',
+              cursor: 'pointer',
+              fontWeight: '600',
+              letterSpacing: '1px',
+            }}
+          >
+            ADD TO CART
+          </button>
+        </div>
       </div>
-
-      <h2>NEW PRODUCT</h2>
-      <h1>
-        XX99 MARK II
-        <br />
-        HEADPHONES
-      </h1>
-      <p>
-        The new XX99 Mark II headphones redefine your premium audio experience
-        with balanced depth and studio-quality precision.
-      </p>
-      <h4>$ 2,999</h4>
-
-      <button
-        onClick={handleAddToCart}
-        style={{
-          backgroundColor: '#D87D4A',
-          color: 'white',
-          border: 'none',
-          padding: '12px 24px',
-          marginTop: '15px',
-          cursor: 'pointer',
-          fontWeight: '600',
-          letterSpacing: '1px',
-        }}
-      >
-        ADD TO CART
-      </button>
     </div>
   );
 };

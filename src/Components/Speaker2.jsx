@@ -10,11 +10,13 @@ const Speaker2 = () => {
                 
         </div>
         
-        <h1>ZX7<br/> SPEAKER</h1>
-        <p>Stream high quality sound wirelessly with<br/> minimal loss. The ZX7 bookshelf speaker uses<br/> high-end audiophile components that<br/> represents the top of the line powered<br/> speakers for home or studio use.</p>
-        <Link to='/ZX7' >
-          <button>SEE PRODUCT</button>
-        </Link>
+        <div>
+          <h1>ZX7<br/> SPEAKER</h1>
+          <p>Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</p>
+          <Link to='/ZX7' >
+            <button>SEE PRODUCT</button>
+          </Link>
+        </div>
       
     </div>
   )

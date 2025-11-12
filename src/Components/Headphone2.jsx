@@ -9,11 +9,13 @@ const Headphone2 = () => {
         <img src={XX99} alt="XX99 Headphones "  />
       </div>
       
-      <h1>XX99 MARK I<br/> HEADPHONES</h1>
-      <p>As the gold standard for headphones, the<br/> classic XX99 Mark I offers detailed and<br/> accurate audio reproduction for audiophiles,<br/> mixing engineers, and music aficionados alike<br/> in studios and on the go.</p>
-      <Link to='/XX9'>
-        <button>SEE PRODUCT</button>
-      </Link>
+      <div>
+        <h1 className='h1'>XX99 MARK I<br/> HEADPHONES</h1>
+        <p>As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.</p>
+        <Link to='/XX9'>
+          <button>SEE PRODUCT</button>
+        </Link>
+      </div>
     </div>
   )
 }
