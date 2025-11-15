@@ -32,7 +32,7 @@ const AboutZX7= () => {
         Go Back
       </h3>
 
-      <div>
+      <div className='hey'>
         <div className='one'>
           <img src={XX99} alt="XX99 Headphones" />
         </div>

@@ -11,13 +11,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background: #000;
   color: #fff;
-  position: relative;
-  z-index: 10;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  
+  z-index: 1000;
+  
+  position: sticky;
+  top: 0;
+  
 
   .menu-icon, .cart-icon {
     font-size: 1.8rem;
